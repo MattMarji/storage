@@ -1,0 +1,28 @@
+# This makefile will be included by the makesfiles in each test directory.
+# It defines certain common paths and targets.
+
+SRCDIR = ../../src
+CLIENTLIB = libstorage.a
+SERVEREXEC = server
+
+# Compile flags.
+CFLAGS = -g -Wall
+LDFLAGS = -g -Wall
+
+
+default: build
+
+# Some initialization tasks before we can run the test.
+init: $(SERVEREXEC)
+
+$(SERVEREXEC): $(SRCDIR)/$(SERVEREXEC)
+	ln -sf $(SRCDIR)/$(SERVEREXEC)
+
+$(SRCDIR)/$(SERVEREXEC):
+	cd $(dir $@) && $(MAKE) $(SERVEREXEC)
+
+$(SRCDIR)/$(CLIENTLIB):
+	cd $(dir $@) && $(MAKE) $(CLIENTLIB)
+
+.PHONY: default init build
+

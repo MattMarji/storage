@@ -1,0 +1,62 @@
+\hypertarget{autoshell_8c}{
+\section{autoshell.c File Reference}
+\label{autoshell_8c}\index{autoshell.c@{autoshell.c}}
+}
+
+
+This file implements a \char`\"{}very\char`\"{} simple sample client.  
+
+
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include \char`\"{}storage.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}utils.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{autoshell_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Start a client to interact with the storage server. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{autoshell_8c_a921a51efabbd17451ca116ab58ce0609}{
+FILE $\ast$ {\bfseries fpCLIENT}}
+\label{autoshell_8c_a921a51efabbd17451ca116ab58ce0609}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a \char`\"{}very\char`\"{} simple sample client. The client connects to the server, running at SERVERHOST:SERVERPORT and performs a number of storage\_\-$\ast$ operations. If there are errors, the client exists. 
+
+Definition in file \hyperlink{autoshell_8c_source}{autoshell.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{autoshell_8c_a0ddf1224851353fc92bfbff6f499fa97}{
+\index{autoshell.c@{autoshell.c}!main@{main}}
+\index{main@{main}!autoshell.c@{autoshell.c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{ argc, }
+\item[{char $\ast$}]{ argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{autoshell_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Start a client to interact with the storage server. 
+
+If connect is successful, the client performs a storage\_\-set/get() on TABLE and KEY and outputs the results on stdout. Finally, it exists after disconnecting from the server. 
+
+Definition at line 31 of file autoshell.c.
+
+
+
+References MAX\_\-HOST\_\-LEN, MAX\_\-KEY\_\-LEN, MAX\_\-TABLE\_\-LEN, MAX\_\-USERNAME\_\-LEN, storage\_\-auth(), storage\_\-connect(), storage\_\-disconnect(), storage\_\-get(), storage\_\-set(), and storage\_\-record::value.
+

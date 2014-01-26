@@ -1,0 +1,91 @@
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}config\_\discretionary {-}{}{}params Struct Reference}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}configuration Struct Reference}{6}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}storage\_\discretionary {-}{}{}record Struct Reference}{6}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{7}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}table Struct Reference}{7}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{7}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}TreeDB Struct Reference}{8}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{8}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}TreeEntry Struct Reference}{8}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{8}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}TreeNode Struct Reference}{8}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{9}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.8}yy\_\discretionary {-}{}{}buffer\_\discretionary {-}{}{}state Struct Reference}{9}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{9}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Member Data Documentation}{9}{subsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.2.1}yy\_\discretionary {-}{}{}bs\_\discretionary {-}{}{}column}{9}{subsubsection.3.8.2.1}
+\contentsline {subsubsection}{\numberline {3.8.2.2}yy\_\discretionary {-}{}{}bs\_\discretionary {-}{}{}lineno}{10}{subsubsection.3.8.2.2}
+\contentsline {section}{\numberline {3.9}yy\_\discretionary {-}{}{}trans\_\discretionary {-}{}{}info Struct Reference}{10}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{10}{subsection.3.9.1}
+\contentsline {section}{\numberline {3.10}yyalloc Union Reference}{10}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{10}{subsection.3.10.1}
+\contentsline {section}{\numberline {3.11}YYSTYPE Union Reference}{11}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{11}{subsection.3.11.1}
+\contentsline {chapter}{\numberline {4}File Documentation}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}autoshell.c File Reference}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{14}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Function Documentation}{14}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}main}{14}{subsubsection.4.1.2.1}
+\contentsline {section}{\numberline {4.2}client.c File Reference}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{15}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Function Documentation}{15}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}main}{15}{subsubsection.4.2.2.1}
+\contentsline {section}{\numberline {4.3}encrypt\_\discretionary {-}{}{}passwd.c File Reference}{15}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{16}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}server.c File Reference}{16}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{17}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Function Documentation}{17}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}main}{17}{subsubsection.4.4.2.1}
+\contentsline {section}{\numberline {4.5}storage.c File Reference}{18}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{19}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Function Documentation}{19}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}storage\_\discretionary {-}{}{}auth}{19}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}storage\_\discretionary {-}{}{}connect}{20}{subsubsection.4.5.2.2}
+\contentsline {subsubsection}{\numberline {4.5.2.3}storage\_\discretionary {-}{}{}disconnect}{20}{subsubsection.4.5.2.3}
+\contentsline {subsubsection}{\numberline {4.5.2.4}storage\_\discretionary {-}{}{}get}{21}{subsubsection.4.5.2.4}
+\contentsline {subsubsection}{\numberline {4.5.2.5}storage\_\discretionary {-}{}{}query}{21}{subsubsection.4.5.2.5}
+\contentsline {subsubsection}{\numberline {4.5.2.6}storage\_\discretionary {-}{}{}set}{22}{subsubsection.4.5.2.6}
+\contentsline {section}{\numberline {4.6}storage.h File Reference}{22}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{24}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Function Documentation}{25}{subsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.2.1}storage\_\discretionary {-}{}{}auth}{25}{subsubsection.4.6.2.1}
+\contentsline {subsubsection}{\numberline {4.6.2.2}storage\_\discretionary {-}{}{}connect}{25}{subsubsection.4.6.2.2}
+\contentsline {subsubsection}{\numberline {4.6.2.3}storage\_\discretionary {-}{}{}disconnect}{26}{subsubsection.4.6.2.3}
+\contentsline {subsubsection}{\numberline {4.6.2.4}storage\_\discretionary {-}{}{}get}{26}{subsubsection.4.6.2.4}
+\contentsline {subsubsection}{\numberline {4.6.2.5}storage\_\discretionary {-}{}{}query}{27}{subsubsection.4.6.2.5}
+\contentsline {subsubsection}{\numberline {4.6.2.6}storage\_\discretionary {-}{}{}set}{28}{subsubsection.4.6.2.6}
+\contentsline {section}{\numberline {4.7}TreeEntry.c File Reference}{28}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{29}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{29}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.1}getEntryValue}{29}{subsubsection.4.7.2.1}
+\contentsline {subsubsection}{\numberline {4.7.2.2}getTableName}{30}{subsubsection.4.7.2.2}
+\contentsline {section}{\numberline {4.8}TreeNode.c File Reference}{30}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{31}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Function Documentation}{31}{subsection.4.8.2}
+\contentsline {subsubsection}{\numberline {4.8.2.1}getLargest}{31}{subsubsection.4.8.2.1}
+\contentsline {section}{\numberline {4.9}utils.c File Reference}{31}{section.4.9}
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{33}{subsection.4.9.1}
+\contentsline {subsection}{\numberline {4.9.2}Function Documentation}{33}{subsection.4.9.2}
+\contentsline {subsubsection}{\numberline {4.9.2.1}generate\_\discretionary {-}{}{}encrypted\_\discretionary {-}{}{}password}{33}{subsubsection.4.9.2.1}
+\contentsline {subsubsection}{\numberline {4.9.2.2}logger}{34}{subsubsection.4.9.2.2}
+\contentsline {subsubsection}{\numberline {4.9.2.3}read\_\discretionary {-}{}{}config}{34}{subsubsection.4.9.2.3}
+\contentsline {subsubsection}{\numberline {4.9.2.4}recvline}{34}{subsubsection.4.9.2.4}
+\contentsline {subsubsection}{\numberline {4.9.2.5}sendall}{35}{subsubsection.4.9.2.5}
+\contentsline {section}{\numberline {4.10}utils.h File Reference}{35}{section.4.10}
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{37}{subsection.4.10.1}
+\contentsline {subsection}{\numberline {4.10.2}Define Documentation}{37}{subsection.4.10.2}
+\contentsline {subsubsection}{\numberline {4.10.2.1}DBG}{37}{subsubsection.4.10.2.1}
+\contentsline {subsubsection}{\numberline {4.10.2.2}LOG}{37}{subsubsection.4.10.2.2}
+\contentsline {subsection}{\numberline {4.10.3}Function Documentation}{38}{subsection.4.10.3}
+\contentsline {subsubsection}{\numberline {4.10.3.1}generate\_\discretionary {-}{}{}encrypted\_\discretionary {-}{}{}password}{38}{subsubsection.4.10.3.1}
+\contentsline {subsubsection}{\numberline {4.10.3.2}logger}{38}{subsubsection.4.10.3.2}
+\contentsline {subsubsection}{\numberline {4.10.3.3}read\_\discretionary {-}{}{}config}{38}{subsubsection.4.10.3.3}
+\contentsline {subsubsection}{\numberline {4.10.3.4}recvline}{39}{subsubsection.4.10.3.4}
+\contentsline {subsubsection}{\numberline {4.10.3.5}sendall}{39}{subsubsection.4.10.3.5}

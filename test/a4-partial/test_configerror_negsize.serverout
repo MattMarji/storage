@@ -1,0 +1,19 @@
+
+>> Server starting
+ALPHA NUM ONLY ! 
+HOSTNAME localhost
+0-9 ONLY ! 
+PORT NUM 5015 
+ALPHA NUM ONLY ! 
+USERNAME admin
+ALL OTHER! 
+PASSWORD xxxnq.BMCifhU
+0-9 ONLY ! 
+CONCURRENCY VALUE: 1 
+ALPHA NUM ONLY ! 
+ALPHA NUM ONLY ! 
+COLON 
+CHAR 
+LEFT BRACE 
+ALL OTHER! 
+>> Error processing config file.

@@ -1,0 +1,94 @@
+\hypertarget{TreeEntry_8c}{
+\section{TreeEntry.c File Reference}
+\label{TreeEntry_8c}\index{TreeEntry.c@{TreeEntry.c}}
+}
+
+
+GET and SET OPERATION are implemented here.  
+
+
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}TreeEntry.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TreeDB.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}storage.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{TreeEntry_8c_a074321a784c17af76639d3789186fd03}{
+struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$ \hyperlink{TreeEntry_8c_a074321a784c17af76639d3789186fd03}{createTable} (char $\ast$name)}
+\label{TreeEntry_8c_a074321a784c17af76639d3789186fd03}
+
+\begin{DoxyCompactList}\small\item\em EVERY TABLE HAS AN ENTRY, so we create a TABLE with a key, value, and table-\/name. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeEntry_8c_a63036cbd8782b25dbddfbc7accafc8fe}{
+void \hyperlink{TreeEntry_8c_a63036cbd8782b25dbddfbc7accafc8fe}{deleteTable} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$\hyperlink{structtable}{table})}
+\label{TreeEntry_8c_a63036cbd8782b25dbddfbc7accafc8fe}
+
+\begin{DoxyCompactList}\small\item\em SAFELY REMOVE THE TABLE. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeEntry_8c_ae3c6989311ffcfc0bb47823bd11c8aef}{
+void \hyperlink{TreeEntry_8c_ae3c6989311ffcfc0bb47823bd11c8aef}{setTableName} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$\hyperlink{structtable}{table}, char $\ast$name)}
+\label{TreeEntry_8c_ae3c6989311ffcfc0bb47823bd11c8aef}
+
+\begin{DoxyCompactList}\small\item\em TABLES ARE DEFINED BY NAMES. HERE WE WILL ASSIGN THE NAME TO THE TABLE. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{TreeEntry_8c_aa2d9d44ff981dd61a6c00e2d922d7a8a}{getTableName} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$\hyperlink{structtable}{table})
+\item 
+char $\ast$ \hyperlink{TreeEntry_8c_a20b37a8f7ee2d7c7be8eb5ac4eb4eae8}{getEntryValue} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$\hyperlink{structtable}{table})
+\item 
+\hypertarget{TreeEntry_8c_a4414831bc47d72ed9295c8e2a37814d8}{
+void \hyperlink{TreeEntry_8c_a4414831bc47d72ed9295c8e2a37814d8}{setEntryValue} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$\hyperlink{structtable}{table}, char $\ast$\_\-value)}
+\label{TreeEntry_8c_a4414831bc47d72ed9295c8e2a37814d8}
+
+\begin{DoxyCompactList}\small\item\em sets entry value to \_\-value \item\end{DoxyCompactList}\item 
+\hypertarget{TreeEntry_8c_a10cff4c4059ba8e10262932dc42b1554}{
+void \hyperlink{TreeEntry_8c_a10cff4c4059ba8e10262932dc42b1554}{printTable} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$\hyperlink{structtable}{table})}
+\label{TreeEntry_8c_a10cff4c4059ba8e10262932dc42b1554}
+
+\begin{DoxyCompactList}\small\item\em prints the name of the table \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GET and SET OPERATION are implemented here. 
+
+Definition in file \hyperlink{TreeEntry_8c_source}{TreeEntry.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{TreeEntry_8c_a20b37a8f7ee2d7c7be8eb5ac4eb4eae8}{
+\index{TreeEntry.c@{TreeEntry.c}!getEntryValue@{getEntryValue}}
+\index{getEntryValue@{getEntryValue}!TreeEntry.c@{TreeEntry.c}}
+\subsubsection[{getEntryValue}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ getEntryValue (
+\begin{DoxyParamCaption}
+\item[{struct {\bf TreeEntry} $\ast$}]{ table}
+\end{DoxyParamCaption}
+)}}
+\label{TreeEntry_8c_a20b37a8f7ee2d7c7be8eb5ac4eb4eae8}
+\begin{DoxyReturn}{Returns}
+returns string to entry value 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file TreeEntry.c.
+
+\hypertarget{TreeEntry_8c_aa2d9d44ff981dd61a6c00e2d922d7a8a}{
+\index{TreeEntry.c@{TreeEntry.c}!getTableName@{getTableName}}
+\index{getTableName@{getTableName}!TreeEntry.c@{TreeEntry.c}}
+\subsubsection[{getTableName}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ getTableName (
+\begin{DoxyParamCaption}
+\item[{struct {\bf TreeEntry} $\ast$}]{ table}
+\end{DoxyParamCaption}
+)}}
+\label{TreeEntry_8c_aa2d9d44ff981dd61a6c00e2d922d7a8a}
+\begin{DoxyReturn}{Returns}
+RETURN THE TABLE NAME 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file TreeEntry.c.
+
+
+
+Referenced by findTable(), insertTable(), and printTable().
+

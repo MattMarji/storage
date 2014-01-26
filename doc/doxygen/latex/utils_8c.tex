@@ -1,0 +1,214 @@
+\hypertarget{utils_8c}{
+\section{utils.c File Reference}
+\label{utils_8c}\index{utils.c@{utils.c}}
+}
+
+
+This file implements various utility functions that are can be used by the storage server and client library.  
+
+
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include \char`\"{}utils.h\char`\"{}}\par
+{\ttfamily \#include $<$math.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{utils_8c_a73c4a410d877b6a9358c547786f2102c}{sendall} (const int sock, const char $\ast$buf, const size\_\-t len)
+\begin{DoxyCompactList}\small\item\em Keep sending the contents of the buffer until complete. \item\end{DoxyCompactList}\item 
+int \hyperlink{utils_8c_ab126c8228ad72abbaed5f282709446ab}{recvline} (const int sock, char $\ast$buf, const size\_\-t buflen)
+\begin{DoxyCompactList}\small\item\em Receive an entire line from a socket. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_a859ed46acad41499aff1f7cfc1bb119c}{
+int \hyperlink{utils_8c_a859ed46acad41499aff1f7cfc1bb119c}{process\_\-config\_\-line} (char $\ast$line, \hyperlink{structconfig__params}{config\_\-params} $\ast$params, int s\_\-table)}
+\label{utils_8c_a859ed46acad41499aff1f7cfc1bb119c}
+
+\begin{DoxyCompactList}\small\item\em Parse and process a line in the config file. \item\end{DoxyCompactList}\item 
+int \hyperlink{utils_8c_a68238ca65153bacb8d086ad1f9e7454f}{read\_\-config} (const char $\ast$config\_\-file, \hyperlink{structconfig__params}{config\_\-params} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Read and load configuration parameters. \item\end{DoxyCompactList}\item 
+void \hyperlink{utils_8c_a97520ee582f1b7eb4c3ab665315b53c9}{logger} (FILE $\ast$file, char $\ast$message, int LOGGING)
+\begin{DoxyCompactList}\small\item\em Generates a log message. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_a91c23a27b0bd2e2f848910ec5bc80d6d}{
+char $\ast$ \hyperlink{utils_8c_a91c23a27b0bd2e2f848910ec5bc80d6d}{currentDateTime} ()}
+\label{utils_8c_a91c23a27b0bd2e2f848910ec5bc80d6d}
+
+\begin{DoxyCompactList}\small\item\em Default two character salt used for password encryption. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{utils_8c_aa26d27a9072e93c052cb0c7fca7909f7}{generate\_\-encrypted\_\-password} (const char $\ast$passwd, const char $\ast$salt)
+\begin{DoxyCompactList}\small\item\em Generates an encrypted password string using salt CRYPT\_\-SALT. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_ac150a30c67cc0f43a3f54972b4a7bf71}{
+int \hyperlink{utils_8c_ac150a30c67cc0f43a3f54972b4a7bf71}{valid\_\-string\_\-check} (char $\ast$input, int value)}
+\label{utils_8c_ac150a30c67cc0f43a3f54972b4a7bf71}
+
+\begin{DoxyCompactList}\small\item\em This \char`\"{}valid\_\-string\_\-check\char`\"{} function will take in a string and check whether this string contains the proper ASCII values from A-\/Z and 0-\/9. If it is then the function returns a zero if not then the function returns another value. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_aea27bf24a79a23c98e46d1ade98a8437}{
+char $\ast$ \hyperlink{utils_8c_aea27bf24a79a23c98e46d1ade98a8437}{add\_\-delimiter} (char $\ast$input)}
+\label{utils_8c_aea27bf24a79a23c98e46d1ade98a8437}
+
+\begin{DoxyCompactList}\small\item\em this function will replace all the spaces within a string into a '\#' for storing purposes in the value. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_ac929c9c0e910bab8124021b6b3fbe4fa}{
+char $\ast$ \hyperlink{utils_8c_ac929c9c0e910bab8124021b6b3fbe4fa}{undo\_\-delimiter} (char $\ast$input)}
+\label{utils_8c_ac929c9c0e910bab8124021b6b3fbe4fa}
+
+\begin{DoxyCompactList}\small\item\em this function will replace all the '\#' within a string into a ' ' for retrieving purposes in the value. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_a40046deaf7bc9e0467bd658f9c660c90}{
+int \hyperlink{utils_8c_a40046deaf7bc9e0467bd658f9c660c90}{timeval\_\-subtract} (struct timeval $\ast$result, struct timeval $\ast$t2, struct timeval $\ast$t1)}
+\label{utils_8c_a40046deaf7bc9e0467bd658f9c660c90}
+
+\begin{DoxyCompactList}\small\item\em The following two functions below are used to time the execution time of the server, and the storage. \char`\"{}timeval\_\-subtract\char`\"{} subtracts final and the initial value to get the elapsed time. \char`\"{}timeval\_\-print\char`\"{} will print out the value of \char`\"{}timeval\_\-subtract\char`\"{}. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_ae27ef67d16072bdf7f42e770800e131b}{
+int \hyperlink{utils_8c_ae27ef67d16072bdf7f42e770800e131b}{type\_\-identifier} (char string\mbox{[}800\mbox{]})}
+\label{utils_8c_ae27ef67d16072bdf7f42e770800e131b}
+
+\begin{DoxyCompactList}\small\item\em The type\_\-identifier function will receive a string and check whether it is all numbers or not. if it is all integers we return 0 identifying that the string sent is an integer else we send 0 which identifies that the string sent is a char value. \item\end{DoxyCompactList}\item 
+\hypertarget{utils_8c_a4da5fc9a95f1656f08eb7764cd203915}{
+int {\bfseries size\_\-get} (char string\mbox{[}800\mbox{]})}
+\label{utils_8c_a4da5fc9a95f1656f08eb7764cd203915}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements various utility functions that are can be used by the storage server and client library. 
+
+Definition in file \hyperlink{utils_8c_source}{utils.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{utils_8c_aa26d27a9072e93c052cb0c7fca7909f7}{
+\index{utils.c@{utils.c}!generate\_\-encrypted\_\-password@{generate\_\-encrypted\_\-password}}
+\index{generate\_\-encrypted\_\-password@{generate\_\-encrypted\_\-password}!utils.c@{utils.c}}
+\subsubsection[{generate\_\-encrypted\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ generate\_\-encrypted\_\-password (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ passwd, }
+\item[{const char $\ast$}]{ salt}
+\end{DoxyParamCaption}
+)}}
+\label{utils_8c_aa26d27a9072e93c052cb0c7fca7909f7}
+
+
+Generates an encrypted password string using salt CRYPT\_\-SALT. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em passwd}]Password before encryption. \item[{\em salt}]Salt used to encrypt the password. If NULL default value DEFAULT\_\-CRYPT\_\-SALT is used. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns encrypted password. 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file utils.c.
+
+
+
+Referenced by storage\_\-auth().
+
+\hypertarget{utils_8c_a97520ee582f1b7eb4c3ab665315b53c9}{
+\index{utils.c@{utils.c}!logger@{logger}}
+\index{logger@{logger}!utils.c@{utils.c}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}void logger (
+\begin{DoxyParamCaption}
+\item[{FILE $\ast$}]{ file, }
+\item[{char $\ast$}]{ message, }
+\item[{int}]{ LOGGER}
+\end{DoxyParamCaption}
+)}}
+\label{utils_8c_a97520ee582f1b7eb4c3ab665315b53c9}
+
+
+Generates a log message. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em file}]The output stream \item[{\em message}]Message to log. \end{DoxyParams}
+
+
+Definition at line 180 of file utils.c.
+
+
+
+Referenced by main(), storage\_\-connect(), storage\_\-disconnect(), storage\_\-get(), storage\_\-query(), and storage\_\-set().
+
+\hypertarget{utils_8c_a68238ca65153bacb8d086ad1f9e7454f}{
+\index{utils.c@{utils.c}!read\_\-config@{read\_\-config}}
+\index{read\_\-config@{read\_\-config}!utils.c@{utils.c}}
+\subsubsection[{read\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}int read\_\-config (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ config\_\-file, }
+\item[{{\bf config\_\-params} $\ast$}]{ params}
+\end{DoxyParamCaption}
+)}}
+\label{utils_8c_a68238ca65153bacb8d086ad1f9e7454f}
+
+
+Read and load configuration parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em config\_\-file}]The name of the configuration file. \item[{\em params}]The structure where config parameters are loaded. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 on success, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file utils.c.
+
+
+
+References process\_\-config\_\-line().
+
+\hypertarget{utils_8c_ab126c8228ad72abbaed5f282709446ab}{
+\index{utils.c@{utils.c}!recvline@{recvline}}
+\index{recvline@{recvline}!utils.c@{utils.c}}
+\subsubsection[{recvline}]{\setlength{\rightskip}{0pt plus 5cm}int recvline (
+\begin{DoxyParamCaption}
+\item[{const int}]{ sock, }
+\item[{char $\ast$}]{ buf, }
+\item[{const size\_\-t}]{ buflen}
+\end{DoxyParamCaption}
+)}}
+\label{utils_8c_ab126c8228ad72abbaed5f282709446ab}
+
+
+Receive an entire line from a socket. 
+
+In order to avoid reading more than a line from the stream, this function only reads one byte at a time. This is very inefficient, and you are free to optimize it or implement your own function. 
+
+Definition at line 40 of file utils.c.
+
+
+
+Referenced by main(), storage\_\-auth(), storage\_\-get(), storage\_\-query(), and storage\_\-set().
+
+\hypertarget{utils_8c_a73c4a410d877b6a9358c547786f2102c}{
+\index{utils.c@{utils.c}!sendall@{sendall}}
+\index{sendall@{sendall}!utils.c@{utils.c}}
+\subsubsection[{sendall}]{\setlength{\rightskip}{0pt plus 5cm}int sendall (
+\begin{DoxyParamCaption}
+\item[{const int}]{ sock, }
+\item[{const char $\ast$}]{ buf, }
+\item[{const size\_\-t}]{ len}
+\end{DoxyParamCaption}
+)}}
+\label{utils_8c_a73c4a410d877b6a9358c547786f2102c}
+
+
+Keep sending the contents of the buffer until complete. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 on success, -\/1 otherwise.
+\end{DoxyReturn}
+The parameters mimic the send() function. 
+
+Definition at line 20 of file utils.c.
+
+
+
+Referenced by storage\_\-auth(), storage\_\-get(), storage\_\-query(), and storage\_\-set().
+

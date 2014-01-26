@@ -1,0 +1,369 @@
+\hypertarget{storage_8h}{
+\section{storage.h File Reference}
+\label{storage_8h}\index{storage.h@{storage.h}}
+}
+
+
+This file defines the interface between the storage client and server.  
+
+
+{\ttfamily \#include $<$stdint.h$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structstorage__record}{storage\_\-record}
+\begin{DoxyCompactList}\small\item\em Encapsulate the value associated with a key in a table. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{storage_8h_a7186273cd88640b740b6333cd98ae243}{
+\#define \hyperlink{storage_8h_a7186273cd88640b740b6333cd98ae243}{MAX\_\-CONFIG\_\-LINE\_\-LEN}~1024}
+\label{storage_8h_a7186273cd88640b740b6333cd98ae243}
+
+\begin{DoxyCompactList}\small\item\em Max characters in each config file line. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a6c4647395896246d6710ba980c31666c}{
+\#define \hyperlink{storage_8h_a6c4647395896246d6710ba980c31666c}{MAX\_\-USERNAME\_\-LEN}~64}
+\label{storage_8h_a6c4647395896246d6710ba980c31666c}
+
+\begin{DoxyCompactList}\small\item\em Max characters of server username. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_aa13f93b74a500b0fd36cf2fd2fa5f30b}{
+\#define \hyperlink{storage_8h_aa13f93b74a500b0fd36cf2fd2fa5f30b}{MAX\_\-ENC\_\-PASSWORD\_\-LEN}~64}
+\label{storage_8h_aa13f93b74a500b0fd36cf2fd2fa5f30b}
+
+\begin{DoxyCompactList}\small\item\em Max characters of server's encrypted password. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_aa746ad89d7f59a152f37e3529057bd58}{
+\#define \hyperlink{storage_8h_aa746ad89d7f59a152f37e3529057bd58}{MAX\_\-HOST\_\-LEN}~64}
+\label{storage_8h_aa746ad89d7f59a152f37e3529057bd58}
+
+\begin{DoxyCompactList}\small\item\em Max characters of server hostname. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a374d6c9cec689b490a1c753145379723}{
+\#define \hyperlink{storage_8h_a374d6c9cec689b490a1c753145379723}{MAX\_\-PORT\_\-LEN}~8}
+\label{storage_8h_a374d6c9cec689b490a1c753145379723}
+
+\begin{DoxyCompactList}\small\item\em Max characters of server port. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_abdd33f362ae3bbdacb5de76473aa8a2f}{
+\#define \hyperlink{storage_8h_abdd33f362ae3bbdacb5de76473aa8a2f}{MAX\_\-PATH\_\-LEN}~256}
+\label{storage_8h_abdd33f362ae3bbdacb5de76473aa8a2f}
+
+\begin{DoxyCompactList}\small\item\em Max characters of data directory path. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a6f4cdd0162e9f2ab251fa5b23410c8da}{
+\#define \hyperlink{storage_8h_a6f4cdd0162e9f2ab251fa5b23410c8da}{MAX\_\-TABLES}~100}
+\label{storage_8h_a6f4cdd0162e9f2ab251fa5b23410c8da}
+
+\begin{DoxyCompactList}\small\item\em Max tables supported by the server. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ad02d7128cbc04a5ec5ee79c6beb66730}{
+\#define \hyperlink{storage_8h_ad02d7128cbc04a5ec5ee79c6beb66730}{MAX\_\-RECORDS\_\-PER\_\-TABLE}~1000}
+\label{storage_8h_ad02d7128cbc04a5ec5ee79c6beb66730}
+
+\begin{DoxyCompactList}\small\item\em Max records per table. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ae7854bc280576d57ec5c80995d5ea94c}{
+\#define \hyperlink{storage_8h_ae7854bc280576d57ec5c80995d5ea94c}{MAX\_\-TABLE\_\-LEN}~20}
+\label{storage_8h_ae7854bc280576d57ec5c80995d5ea94c}
+
+\begin{DoxyCompactList}\small\item\em Max characters of a table name. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ad91bfaf106e42aa552f1605c5b8a9ef2}{
+\#define \hyperlink{storage_8h_ad91bfaf106e42aa552f1605c5b8a9ef2}{MAX\_\-KEY\_\-LEN}~20}
+\label{storage_8h_ad91bfaf106e42aa552f1605c5b8a9ef2}
+
+\begin{DoxyCompactList}\small\item\em Max characters of a key name. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a053b7859476cc9867ec62c49e68d3fa1}{
+\#define \hyperlink{storage_8h_a053b7859476cc9867ec62c49e68d3fa1}{MAX\_\-CONNECTIONS}~10}
+\label{storage_8h_a053b7859476cc9867ec62c49e68d3fa1}
+
+\begin{DoxyCompactList}\small\item\em Max simultaneous client connections. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a2c806bc7de304d1d07bb12c9d58dbdd1}{
+\#define \hyperlink{storage_8h_a2c806bc7de304d1d07bb12c9d58dbdd1}{MAX\_\-COLUMNS\_\-PER\_\-TABLE}~10}
+\label{storage_8h_a2c806bc7de304d1d07bb12c9d58dbdd1}
+
+\begin{DoxyCompactList}\small\item\em Max columns per table. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a5cced553ee7679aebe25952d79c7b86b}{
+\#define \hyperlink{storage_8h_a5cced553ee7679aebe25952d79c7b86b}{MAX\_\-COLNAME\_\-LEN}~20}
+\label{storage_8h_a5cced553ee7679aebe25952d79c7b86b}
+
+\begin{DoxyCompactList}\small\item\em Max characters of a column name. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ab9cbe6531d78ffac767508924ec1b5ac}{
+\#define \hyperlink{storage_8h_ab9cbe6531d78ffac767508924ec1b5ac}{MAX\_\-STRTYPE\_\-SIZE}~40}
+\label{storage_8h_ab9cbe6531d78ffac767508924ec1b5ac}
+
+\begin{DoxyCompactList}\small\item\em Max SIZE of string types. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a00a29850f2b5b985f776f864d83e5ac3}{
+\#define \hyperlink{storage_8h_a00a29850f2b5b985f776f864d83e5ac3}{MAX\_\-VALUE\_\-LEN}~800}
+\label{storage_8h_a00a29850f2b5b985f776f864d83e5ac3}
+
+\begin{DoxyCompactList}\small\item\em Max characters of a value. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ad633b9edd00d2bf59ace1af24cc483f4}{
+\#define \hyperlink{storage_8h_ad633b9edd00d2bf59ace1af24cc483f4}{ERR\_\-INVALID\_\-PARAM}~1}
+\label{storage_8h_ad633b9edd00d2bf59ace1af24cc483f4}
+
+\begin{DoxyCompactList}\small\item\em A parameter is not valid. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_aeef6b01ffc4d49ae7b4a2e17eefb4ade}{
+\#define \hyperlink{storage_8h_aeef6b01ffc4d49ae7b4a2e17eefb4ade}{ERR\_\-CONNECTION\_\-FAIL}~2}
+\label{storage_8h_aeef6b01ffc4d49ae7b4a2e17eefb4ade}
+
+\begin{DoxyCompactList}\small\item\em Error connecting to server. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ab03e83c2f65be8b009eff331f370058d}{
+\#define \hyperlink{storage_8h_ab03e83c2f65be8b009eff331f370058d}{ERR\_\-NOT\_\-AUTHENTICATED}~3}
+\label{storage_8h_ab03e83c2f65be8b009eff331f370058d}
+
+\begin{DoxyCompactList}\small\item\em Client not authenticated. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a3ff770fb1d0d1d37b43e6a27f85a7cd1}{
+\#define \hyperlink{storage_8h_a3ff770fb1d0d1d37b43e6a27f85a7cd1}{ERR\_\-AUTHENTICATION\_\-FAILED}~4}
+\label{storage_8h_a3ff770fb1d0d1d37b43e6a27f85a7cd1}
+
+\begin{DoxyCompactList}\small\item\em Client authentication failed. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_ab1c0830c9f58e53bf4a9ff593a24b761}{
+\#define \hyperlink{storage_8h_ab1c0830c9f58e53bf4a9ff593a24b761}{ERR\_\-TABLE\_\-NOT\_\-FOUND}~5}
+\label{storage_8h_ab1c0830c9f58e53bf4a9ff593a24b761}
+
+\begin{DoxyCompactList}\small\item\em The table does not exist. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_afd0cce588bf32d57085d8d0a28bd8e34}{
+\#define \hyperlink{storage_8h_afd0cce588bf32d57085d8d0a28bd8e34}{ERR\_\-KEY\_\-NOT\_\-FOUND}~6}
+\label{storage_8h_afd0cce588bf32d57085d8d0a28bd8e34}
+
+\begin{DoxyCompactList}\small\item\em The key does not exist. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a60d04c865fd58d86758894edca38bf30}{
+\#define \hyperlink{storage_8h_a60d04c865fd58d86758894edca38bf30}{ERR\_\-UNKNOWN}~7}
+\label{storage_8h_a60d04c865fd58d86758894edca38bf30}
+
+\begin{DoxyCompactList}\small\item\em Any other error. \item\end{DoxyCompactList}\item 
+\hypertarget{storage_8h_a31edc5f52b2c941d356fda0e409272ef}{
+\#define \hyperlink{storage_8h_a31edc5f52b2c941d356fda0e409272ef}{ERR\_\-TRANSACTION\_\-ABORT}~8}
+\label{storage_8h_a31edc5f52b2c941d356fda0e409272ef}
+
+\begin{DoxyCompactList}\small\item\em Transaction abort error. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{storage_8h_abc3751ffba629aad5a4b8c7c22a75e11}{storage\_\-connect} (const char $\ast$hostname, const int port)
+\begin{DoxyCompactList}\small\item\em Establish a connection to the server. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8h_aa97b5545b3eefb5055a4e6febd375796}{storage\_\-auth} (const char $\ast$username, const char $\ast$passwd, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em Authenticate the client's connection to the server. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8h_ac75689ee50898a2f6580c6489e886b59}{storage\_\-get} (const char $\ast$\hyperlink{structtable}{table}, const char $\ast$key, struct \hyperlink{structstorage__record}{storage\_\-record} $\ast$record, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em Retrieve the value associated with a key in a table. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8h_a8a42f72670cdcd7bf83416df1f1b090d}{storage\_\-set} (const char $\ast$\hyperlink{structtable}{table}, const char $\ast$key, struct \hyperlink{structstorage__record}{storage\_\-record} $\ast$record, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em Store a key/value pair in a table. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8h_af4e09b41d2bc5b8c25936fe952e748b2}{storage\_\-query} (const char $\ast$\hyperlink{structtable}{table}, const char $\ast$predicates, char $\ast$$\ast$keys, const int max\_\-keys, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em Query the table for records, and retrieve the matching keys. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8h_acd449536193542befbae2ff5e916f657}{storage\_\-disconnect} (void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em Close the connection to the server. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines the interface between the storage client and server. The functions here should be implemented in \hyperlink{storage_8c}{storage.c}.
+
+{\bfseries You should not modify this file, or else the code used to mark your implementation will break.} 
+
+Definition in file \hyperlink{storage_8h_source}{storage.h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{storage_8h_aa97b5545b3eefb5055a4e6febd375796}{
+\index{storage.h@{storage.h}!storage\_\-auth@{storage\_\-auth}}
+\index{storage\_\-auth@{storage\_\-auth}!storage.h@{storage.h}}
+\subsubsection[{storage\_\-auth}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-auth (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ username, }
+\item[{const char $\ast$}]{ passwd, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8h_aa97b5545b3eefb5055a4e6febd375796}
+
+
+Authenticate the client's connection to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em username}]Username to access the storage server. \item[{\em passwd}]Password in its plain text form. \item[{\em conn}]A connection to the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successful, and -\/1 otherwise.
+\end{DoxyReturn}
+On error, errno will be set to ERR\_\-AUTHENTICATION\_\-FAILED. 
+
+Definition at line 105 of file storage.c.
+
+
+
+References ERR\_\-AUTHENTICATION\_\-FAILED, generate\_\-encrypted\_\-password(), recvline(), and sendall().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8h_abc3751ffba629aad5a4b8c7c22a75e11}{
+\index{storage.h@{storage.h}!storage\_\-connect@{storage\_\-connect}}
+\index{storage\_\-connect@{storage\_\-connect}!storage.h@{storage.h}}
+\subsubsection[{storage\_\-connect}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ storage\_\-connect (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ hostname, }
+\item[{const int}]{ port}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8h_abc3751ffba629aad5a4b8c7c22a75e11}
+
+
+Establish a connection to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em hostname}]The IP address or hostname of the server. \item[{\em port}]The TCP port of the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If successful, return a pointer to a data structure that represents a connection to the server. Otherwise return NULL.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, or ERR\_\-UNKNOWN. 
+
+Client connects! REASONING: We will have to ensure that the user correctly enters the required hostname and password. we will LOG what the user enters for the hostname and password, as well as what time they connect. NOTE: If this log does not get written, the client has likely not entered a valid hostname and/or password LOGGER 1! If connection to server not made, return NULL, ELSE if connection made, return socket value (integer).
+
+
+
+Definition at line 31 of file storage.c.
+
+
+
+References currentDateTime(), and logger().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8h_acd449536193542befbae2ff5e916f657}{
+\index{storage.h@{storage.h}!storage\_\-disconnect@{storage\_\-disconnect}}
+\index{storage\_\-disconnect@{storage\_\-disconnect}!storage.h@{storage.h}}
+\subsubsection[{storage\_\-disconnect}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-disconnect (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8h_acd449536193542befbae2ff5e916f657}
+
+
+Close the connection to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em conn}]A pointer to the connection structure returned in an earlier call to \hyperlink{storage_8c_abc3751ffba629aad5a4b8c7c22a75e11}{storage\_\-connect()}. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successful, and -\/1 otherwise.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, or ERR\_\-UNKNOWN. 
+
+Definition at line 514 of file storage.c.
+
+
+
+References currentDateTime(), and logger().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8h_ac75689ee50898a2f6580c6489e886b59}{
+\index{storage.h@{storage.h}!storage\_\-get@{storage\_\-get}}
+\index{storage\_\-get@{storage\_\-get}!storage.h@{storage.h}}
+\subsubsection[{storage\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ table, }
+\item[{const char $\ast$}]{ key, }
+\item[{struct {\bf storage\_\-record} $\ast$}]{ record, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8h_ac75689ee50898a2f6580c6489e886b59}
+
+
+Retrieve the value associated with a key in a table. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em table}]A table in the database. \item[{\em key}]A key in the table. \item[{\em record}]A pointer to a record struture. \item[{\em conn}]A connection to the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successful, and -\/1 otherwise.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, ERR\_\-TABLE\_\-NOT\_\-FOUND, ERR\_\-KEY\_\-NOT\_\-FOUND, ERR\_\-NOT\_\-AUTHENTICATED, or ERR\_\-UNKNOWN.
+
+The record with the specified key in the specified table is retrieved from the server using the specified connection. If the key is found, the record structure is populated with the details of the corresponding record. Otherwise, the record structure is not modified. 
+
+Definition at line 174 of file storage.c.
+
+
+
+References ERR\_\-KEY\_\-NOT\_\-FOUND, ERR\_\-TABLE\_\-NOT\_\-FOUND, logger(), recvline(), sendall(), valid\_\-string\_\-check(), and storage\_\-record::value.
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8h_af4e09b41d2bc5b8c25936fe952e748b2}{
+\index{storage.h@{storage.h}!storage\_\-query@{storage\_\-query}}
+\index{storage\_\-query@{storage\_\-query}!storage.h@{storage.h}}
+\subsubsection[{storage\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-query (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ table, }
+\item[{const char $\ast$}]{ predicates, }
+\item[{char $\ast$$\ast$}]{ keys, }
+\item[{const int}]{ max\_\-keys, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8h_af4e09b41d2bc5b8c25936fe952e748b2}
+
+
+Query the table for records, and retrieve the matching keys. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em table}]A table in the database. \item[{\em predicates}]A comma separated list of predicates. \item[{\em keys}]An array of strings where the keys whose records match the specified predicates will be copied. The array must have room for at least max\_\-keys elements. The caller must allocate memory for this array. \item[{\em max\_\-keys}]The size of the keys array. \item[{\em conn}]A connection to the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the number of matching keys (which may be more than max\_\-keys) if successful, and -\/1 otherwise.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, ERR\_\-TABLE\_\-NOT\_\-FOUND, ERR\_\-KEY\_\-NOT\_\-FOUND, ERR\_\-NOT\_\-AUTHENTICATED, or ERR\_\-UNKNOWN.
+
+Each predicate consists of a column name, an operator, and a value, each separated by optional whitespace. The operator may be a \char`\"{}=\char`\"{} for string types, or one of \char`\"{}$<$, $>$, =\char`\"{} for int and float types. An example of query predicates is \char`\"{}name = bob, mark $>$ 90\char`\"{}. 
+
+Definition at line 368 of file storage.c.
+
+
+
+References ERR\_\-INVALID\_\-PARAM, ERR\_\-TABLE\_\-NOT\_\-FOUND, logger(), MAX\_\-KEY\_\-LEN, recvline(), sendall(), and valid\_\-string\_\-check().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8h_a8a42f72670cdcd7bf83416df1f1b090d}{
+\index{storage.h@{storage.h}!storage\_\-set@{storage\_\-set}}
+\index{storage\_\-set@{storage\_\-set}!storage.h@{storage.h}}
+\subsubsection[{storage\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ table, }
+\item[{const char $\ast$}]{ key, }
+\item[{struct {\bf storage\_\-record} $\ast$}]{ record, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8h_a8a42f72670cdcd7bf83416df1f1b090d}
+
+
+Store a key/value pair in a table. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em table}]A table in the database. \item[{\em key}]A key in the table. \item[{\em record}]A pointer to a record struture. \item[{\em conn}]A connection to the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if successful, and -\/1 otherwise.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, ERR\_\-TABLE\_\-NOT\_\-FOUND, ERR\_\-KEY\_\-NOT\_\-FOUND, ERR\_\-NOT\_\-AUTHENTICATED, or ERR\_\-UNKNOWN.
+
+The key and record are stored in the table of the database using the connection. If the key already exists in the table, the corresponding record is updated with the one specified here. If the key exists in the table and the record is NULL, the key/value pair are deleted from the table. 
+
+Definition at line 263 of file storage.c.
+
+
+
+References currentDateTime(), logger(), recvline(), sendall(), valid\_\-string\_\-check(), and storage\_\-record::value.
+
+
+
+Referenced by main().
+

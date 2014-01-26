@@ -1,0 +1,706 @@
+error: syntax error
+server main errno = 0
+localhost
+6421
+admin
+xxxnq.BMCifhU
+threecols
+int
+number of cols: 1
+int
+number of cols: 2
+char
+10
+number of cols: 3
+fourcols
+char
+fourcols
+number of cols: 1
+int
+number of cols: 2
+int
+number of cols: 3
+char
+20
+number of cols: 4
+sixcols
+char
+sixcols
+sixcols
+number of cols: 1
+char
+20
+number of cols: 2
+int
+number of cols: 3
+int
+number of cols: 4
+int
+number of cols: 5
+int
+number of cols: 6
+server 677 status=0
+server 681 status=0
+numtables:3,numcols:3
+threecols.col1.0.col2.0.col3.1.10.
+fourcols.col1.1.10.col2.0.col3.0.col4.1.20.
+sixcols.col1.1.10.col2.1.20.col3.0.col4.0.col5.0.col6.0.
+problem not at line 622
+problem not at line 624
+problem not at line 626
+problem not at line 628
+problem not at line 632
+problem not at line 635
+problem not at line 639
+tablelist[0]: tablename = threecols
+col[0]: colname = col1
+col[1]: colname = col2
+col[2]: colname = col3
+tablelist[1]: tablename = fourcols
+col[0]: colname = col1
+col[1]: colname = col2
+col[2]: colname = col3
+col[3]: colname = col4
+tablelist[2]: tablename = sixcols
+col[0]: colname = col1
+col[1]: colname = col2
+col[2]: colname = col3
+col[3]: colname = col4
+col[4]: colname = col5
+col[5]: colname = col6
+server line 520 - AUTH admin xxxnq.BMCifhU
+server line 85 cmd: AUTH admin xxxnq.BMCifhU
+server line 86 command:AUTH
+about to return from HC1
+server line 728, returned from handle_command
+server line 520 - SET threecols somekey1 col1 -2,col2 -2,col3 abc
+server line 85 cmd: SET threecols somekey1 col1 -2,col2 -2,col3 abc
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 -2,col2 -2,col3 abc
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+intvalue = -2
+numscols = 1
+numcols true = 1, colname = col2
+intvalue = -2
+numscols = 2
+numcols true = 2, colname = col3
+numcols true = 2, colname = col3
+charvalue = abc
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET threecols somekey1 col1 -2,col2 -2,col3 abc
+server 228 numscols = 3
+intvalue != NULL ---a=0--col1 -2
+intvalue != NULL ---a=1--col2 -2
+intvalue == NULL ---a=2--col3 abc
+server line 174 i = 0
+server line 255
+server 257 numscols = 3
+server 333 numcols-from-config 3
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 271
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 271
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 270
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET threecols somekey1 col1 -2,col2 -2,col3 abc
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET threecols somekey2 col1 2,col2 2,col3 def
+server line 85 cmd: SET threecols somekey2 col1 2,col2 2,col3 def
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 2,col2 2,col3 def
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+intvalue = 2
+numscols = 1
+numcols true = 1, colname = col2
+intvalue = 2
+numscols = 2
+numcols true = 2, colname = col3
+numcols true = 2, colname = col3
+charvalue = def
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET threecols somekey2 col1 2,col2 2,col3 def
+server 228 numscols = 3
+intvalue != NULL ---a=0--col1 2
+intvalue != NULL ---a=1--col2 2
+intvalue == NULL ---a=2--col3 def
+server line 174 i = 0
+server line 255
+server 257 numscols = 3
+server 333 numcols-from-config 3
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 271
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 271
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 270
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET threecols somekey2 col1 2,col2 2,col3 def
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET threecols somekey3 col1 4,col2 4,col3 abc def
+server line 85 cmd: SET threecols somekey3 col1 4,col2 4,col3 abc def
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 4,col2 4,col3 abc def
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+intvalue = 4
+numscols = 1
+numcols true = 1, colname = col2
+intvalue = 4
+numscols = 2
+numcols true = 2, colname = col3
+numcols true = 2, colname = col3
+charvalue = abc
+numcols true = 2, colname = col3
+charvalue = abc def
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET threecols somekey3 col1 4,col2 4,col3 abc def
+server 228 numscols = 3
+intvalue != NULL ---a=0--col1 4
+intvalue != NULL ---a=1--col2 4
+intvalue == NULL ---a=2--col3 abc def
+server line 174 i = 0
+server line 255
+server 257 numscols = 3
+server 333 numcols-from-config 3
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 271
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 271
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 270
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET threecols somekey3 col1 4,col2 4,col3 abc def
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET fourcols somekey1 col1 abc,col2 -2,col3 -2,col4 ABC
+server line 85 cmd: SET fourcols somekey1 col1 abc,col2 -2,col3 -2,col4 ABC
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 abc,col2 -2,col3 -2,col4 ABC
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+numcols true = 0, colname = col1
+charvalue = abc
+numscols = 1
+numcols true = 1, colname = col2
+intvalue = -2
+numscols = 2
+numcols true = 2, colname = col3
+intvalue = -2
+numscols = 3
+numcols true = 3, colname = col4
+numcols true = 3, colname = col4
+charvalue = ABC
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET fourcols somekey1 col1 abc,col2 -2,col3 -2,col4 ABC
+server 228 numscols = 4
+intvalue == NULL ---a=0--col1 abc
+intvalue != NULL ---a=1--col2 -2
+intvalue != NULL ---a=2--col3 -2
+intvalue == NULL ---a=3--col4 ABC
+server line 174 i = 1
+server line 255
+server 257 numscols = 4
+server 333 numcols-from-config 4
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 270
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 271
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 271
+server line 262
+server line 264 temp2 = col4
+server line 265 setvalues = col4
+server line 270
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET fourcols somekey1 col1 abc,col2 -2,col3 -2,col4 ABC
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET fourcols somekey2 col1 def,col2 2,col3 2,col4 DEF
+server line 85 cmd: SET fourcols somekey2 col1 def,col2 2,col3 2,col4 DEF
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 def,col2 2,col3 2,col4 DEF
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+numcols true = 0, colname = col1
+charvalue = def
+numscols = 1
+numcols true = 1, colname = col2
+intvalue = 2
+numscols = 2
+numcols true = 2, colname = col3
+intvalue = 2
+numscols = 3
+numcols true = 3, colname = col4
+numcols true = 3, colname = col4
+charvalue = DEF
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET fourcols somekey2 col1 def,col2 2,col3 2,col4 DEF
+server 228 numscols = 4
+intvalue == NULL ---a=0--col1 def
+intvalue != NULL ---a=1--col2 2
+intvalue != NULL ---a=2--col3 2
+intvalue == NULL ---a=3--col4 DEF
+server line 174 i = 1
+server line 255
+server 257 numscols = 4
+server 333 numcols-from-config 4
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 270
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 271
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 271
+server line 262
+server line 264 temp2 = col4
+server line 265 setvalues = col4
+server line 270
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET fourcols somekey2 col1 def,col2 2,col3 2,col4 DEF
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET fourcols somekey3 col1 abc def,col2 4,col3 4,col4 ABC DEF
+server line 85 cmd: SET fourcols somekey3 col1 abc def,col2 4,col3 4,col4 ABC DEF
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 abc def,col2 4,col3 4,col4 ABC DEF
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+numcols true = 0, colname = col1
+charvalue = abc
+numcols true = 0, colname = col1
+charvalue = abc def
+numscols = 1
+numcols true = 1, colname = col2
+intvalue = 4
+numscols = 2
+numcols true = 2, colname = col3
+intvalue = 4
+numscols = 3
+numcols true = 3, colname = col4
+numcols true = 3, colname = col4
+charvalue = ABC
+numcols true = 3, colname = col4
+charvalue = ABC DEF
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET fourcols somekey3 col1 abc def,col2 4,col3 4,col4 ABC DEF
+server 228 numscols = 4
+intvalue == NULL ---a=0--col1 abc def
+intvalue != NULL ---a=1--col2 4
+intvalue != NULL ---a=2--col3 4
+intvalue == NULL ---a=3--col4 ABC DEF
+server line 174 i = 1
+server line 255
+server 257 numscols = 4
+server 333 numcols-from-config 4
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 270
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 271
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 271
+server line 262
+server line 264 temp2 = col4
+server line 265 setvalues = col4
+server line 270
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET fourcols somekey3 col1 abc def,col2 4,col3 4,col4 ABC DEF
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET sixcols somekey1 col1 abc,col2 ABC,col3 -2,col4 2,col5 -2,col6 2
+server line 85 cmd: SET sixcols somekey1 col1 abc,col2 ABC,col3 -2,col4 2,col5 -2,col6 2
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 abc,col2 ABC,col3 -2,col4 2,col5 -2,col6 2
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+numcols true = 0, colname = col1
+charvalue = abc
+numscols = 1
+numcols true = 1, colname = col2
+numcols true = 1, colname = col2
+charvalue = ABC
+numscols = 2
+numcols true = 2, colname = col3
+intvalue = -2
+numscols = 3
+numcols true = 3, colname = col4
+intvalue = 2
+numscols = 4
+numcols true = 4, colname = col5
+intvalue = -2
+numscols = 5
+numcols true = 5, colname = col6
+intvalue = 2
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET sixcols somekey1 col1 abc,col2 ABC,col3 -2,col4 2,col5 -2,col6 2
+server 228 numscols = 6
+intvalue == NULL ---a=0--col1 abc
+intvalue == NULL ---a=1--col2 ABC
+intvalue != NULL ---a=2--col3 -2
+intvalue != NULL ---a=3--col4 2
+intvalue != NULL ---a=4--col5 -2
+intvalue != NULL ---a=5--col6 2
+server line 174 i = 2
+server line 255
+server 257 numscols = 6
+server 333 numcols-from-config 6
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 270
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 270
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 271
+server line 262
+server line 264 temp2 = col4
+server line 265 setvalues = col4
+server line 271
+server line 262
+server line 264 temp2 = col5
+server line 265 setvalues = col5
+server line 271
+server line 262
+server line 264 temp2 = col6
+server line 265 setvalues = col6
+server line 271
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET sixcols somekey1 col1 abc,col2 ABC,col3 -2,col4 2,col5 -2,col6 2
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET sixcols somekey2 col1 abc,col2 ABC,col3 2,col4 -2,col5 2,col6 -2
+server line 85 cmd: SET sixcols somekey2 col1 abc,col2 ABC,col3 2,col4 -2,col5 2,col6 -2
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 abc,col2 ABC,col3 2,col4 -2,col5 2,col6 -2
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+numcols true = 0, colname = col1
+charvalue = abc
+numscols = 1
+numcols true = 1, colname = col2
+numcols true = 1, colname = col2
+charvalue = ABC
+numscols = 2
+numcols true = 2, colname = col3
+intvalue = 2
+numscols = 3
+numcols true = 3, colname = col4
+intvalue = -2
+numscols = 4
+numcols true = 4, colname = col5
+intvalue = 2
+numscols = 5
+numcols true = 5, colname = col6
+intvalue = -2
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET sixcols somekey2 col1 abc,col2 ABC,col3 2,col4 -2,col5 2,col6 -2
+server 228 numscols = 6
+intvalue == NULL ---a=0--col1 abc
+intvalue == NULL ---a=1--col2 ABC
+intvalue != NULL ---a=2--col3 2
+intvalue != NULL ---a=3--col4 -2
+intvalue != NULL ---a=4--col5 2
+intvalue != NULL ---a=5--col6 -2
+server line 174 i = 2
+server line 255
+server 257 numscols = 6
+server 333 numcols-from-config 6
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 270
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 270
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 271
+server line 262
+server line 264 temp2 = col4
+server line 265 setvalues = col4
+server line 271
+server line 262
+server line 264 temp2 = col5
+server line 265 setvalues = col5
+server line 271
+server line 262
+server line 264 temp2 = col6
+server line 265 setvalues = col6
+server line 271
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET sixcols somekey2 col1 abc,col2 ABC,col3 2,col4 -2,col5 2,col6 -2
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET sixcols somekey3 col1 def,col2 DEF,col3 4,col4 -4,col5 4,col6 -4
+server line 85 cmd: SET sixcols somekey3 col1 def,col2 DEF,col3 4,col4 -4,col5 4,col6 -4
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 def,col2 DEF,col3 4,col4 -4,col5 4,col6 -4
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+numcols true = 0, colname = col1
+charvalue = def
+numscols = 1
+numcols true = 1, colname = col2
+numcols true = 1, colname = col2
+charvalue = DEF
+numscols = 2
+numcols true = 2, colname = col3
+intvalue = 4
+numscols = 3
+numcols true = 3, colname = col4
+intvalue = -4
+numscols = 4
+numcols true = 4, colname = col5
+intvalue = 4
+numscols = 5
+numcols true = 5, colname = col6
+intvalue = -4
+line 534----
+line 536----
+LINE154SEVER: you have entered handle_command2
+server 239 cmd = SET sixcols somekey3 col1 def,col2 DEF,col3 4,col4 -4,col5 4,col6 -4
+server 228 numscols = 6
+intvalue == NULL ---a=0--col1 def
+intvalue == NULL ---a=1--col2 DEF
+intvalue != NULL ---a=2--col3 4
+intvalue != NULL ---a=3--col4 -4
+intvalue != NULL ---a=4--col5 4
+intvalue != NULL ---a=5--col6 -4
+server line 174 i = 2
+server line 255
+server 257 numscols = 6
+server 333 numcols-from-config 6
+server line 262
+server line 264 temp2 = col1
+server line 265 setvalues = col1
+server line 270
+server line 262
+server line 264 temp2 = col2
+server line 265 setvalues = col2
+server line 270
+server line 262
+server line 264 temp2 = col3
+server line 265 setvalues = col3
+server line 271
+server line 262
+server line 264 temp2 = col4
+server line 265 setvalues = col4
+server line 271
+server line 262
+server line 264 temp2 = col5
+server line 265 setvalues = col5
+server line 271
+server line 262
+server line 264 temp2 = col6
+server line 265 setvalues = col6
+server line 271
+server 384 its all good
+server line 397
+server line 416
+server line 419
+server line 435
+server line 435
+server line 435
+server line 435
+server line 435
+server line 435
+server 456 finished set
+server 490 return to client via sendall
+THIS IS CMD: SET sixcols somekey3 col1 def,col2 DEF,col3 4,col4 -4,col5 4,col6 -4
+server line 758, returned from handle_command2
+server line 759 test
+server 760 status = 0server line 520 - SET threecols somekey1 col1 2 col2 -2 , col3 abc
+server line 85 cmd: SET threecols somekey1 col1 2 col2 -2 , col3 abc
+server line 86 command:SET
+Sparserflag set to 1
+about to return from HC1
+server line 728, returned from handle_command
+inside flagSParser == 1
+col1 2 col2 -2 , col3 abc
+line 532----
+numscols = 0
+numcols true = 0, colname = col1
+intvalue = 2
+line 534----
+Error.
+4----
+Error.

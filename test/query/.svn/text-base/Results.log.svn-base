@@ -1,0 +1,8 @@
+Running suite Query Tests
+main.c:270:F:Query:test_missing_comma:0: storage_query with missing comma should fail.
+main.c:282:P:Query:test_mixed_col_order:0: Passed
+main.c:291:F:Query:test_float_type:0: storage_query with float should fail.
+main.c:303:F:Query:test_operator_for_string_type:0: storage_query with incorrect operator should fail.
+main.c:315:F:Query:test_col_name:0: storage_query with Col column name should fail.
+Results for all suites run:
+20%: Checks: 5, Failures: 4, Errors: 0

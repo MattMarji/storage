@@ -1,0 +1,6 @@
+server_host localhost
+server_port 5713
+username arno
+password xxhA4cf2RHUfI
+concurrency 3
+table inttbl col:int

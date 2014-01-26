@@ -1,0 +1,117 @@
+\hypertarget{server_8c}{
+\section{server.c File Reference}
+\label{server_8c}\index{server.c@{server.c}}
+}
+
+
+This file implements the storage server.  
+
+
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include $<$arpa/inet.h$>$}\par
+{\ttfamily \#include $<$netdb.h$>$}\par
+{\ttfamily \#include $<$assert.h$>$}\par
+{\ttfamily \#include $<$signal.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include \char`\"{}utils.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TreeDB.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TreeNode.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TreeEntry.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{server_8c_a24a31f60b063af0e662125ea2427b140}{
+\#define {\bfseries LOGGING}~1}
+\label{server_8c_a24a31f60b063af0e662125ea2427b140}
+
+\item 
+\hypertarget{server_8c_a36b090ddf192f97d9fecf8ff5a98996e}{
+\#define \hyperlink{server_8c_a36b090ddf192f97d9fecf8ff5a98996e}{MAX\_\-LISTENQUEUELEN}~20}
+\label{server_8c_a36b090ddf192f97d9fecf8ff5a98996e}
+
+\begin{DoxyCompactList}\small\item\em The maximum number of queued connections. \item\end{DoxyCompactList}\item 
+\hypertarget{server_8c_ac829415013d8120cedee928452ae0f55}{
+\#define {\bfseries STRING\_\-LENGTH}~20}
+\label{server_8c_ac829415013d8120cedee928452ae0f55}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{server_8c_ad2cc5ff95d0bda49acb83ae65d9ce41f}{
+int {\bfseries handle\_\-command} (int sock, char $\ast$cmd, struct \hyperlink{structTreeDB}{TreeDB} $\ast$tree, \hyperlink{structconfig__params}{config\_\-params} params, int lex\_\-status)}
+\label{server_8c_ad2cc5ff95d0bda49acb83ae65d9ce41f}
+
+\item 
+int \hyperlink{server_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Start the storage server. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{server_8c_a5b445341de7ac4c12524f9f41481988c}{
+struct \hyperlink{structconfiguration}{configuration} $\ast$ {\bfseries c}}
+\label{server_8c_a5b445341de7ac4c12524f9f41481988c}
+
+\item 
+\hypertarget{server_8c_a1b73c4e120d7984df6b524987c2e66e4}{
+struct \hyperlink{structtable}{table} $\ast$ {\bfseries tl}}
+\label{server_8c_a1b73c4e120d7984df6b524987c2e66e4}
+
+\item 
+\hypertarget{server_8c_a600b2a3731001df2fcc6ceeeb040c921}{
+struct \hyperlink{structtable}{table} $\ast$ {\bfseries t}}
+\label{server_8c_a600b2a3731001df2fcc6ceeeb040c921}
+
+\item 
+\hypertarget{server_8c_a8281904c146c507a9797ead2099fcec6}{
+FILE $\ast$ {\bfseries fpSERVER}}
+\label{server_8c_a8281904c146c507a9797ead2099fcec6}
+
+\item 
+\hypertarget{server_8c_a7ce3e773b0b1935cd8340452f5f75d7a}{
+int {\bfseries error\_\-status}}
+\label{server_8c_a7ce3e773b0b1935cd8340452f5f75d7a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements the storage server. The storage server should be named \char`\"{}server\char`\"{} and should take a single command line argument that refers to the configuration file.
+
+The storage server should be able to communicate with the client library functions declared in \hyperlink{storage_8h}{storage.h} and implemented in \hyperlink{storage_8c}{storage.c}. 
+
+Definition in file \hyperlink{server_8c_source}{server.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{server_8c_a0ddf1224851353fc92bfbff6f499fa97}{
+\index{server.c@{server.c}!main@{main}}
+\index{main@{main}!server.c@{server.c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{ argc, }
+\item[{char $\ast$}]{ argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{server_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Start the storage server. 
+
+This is the main entry point for the storage server. It reads the configuration file, starts listening on a port, and processes commands from clients. 
+
+Definition at line 1046 of file server.c.
+
+
+
+References createTable(), currentDateTime(), logger(), MAX\_\-CMD\_\-LEN, MAX\_\-ENC\_\-PASSWORD\_\-LEN, MAX\_\-KEY\_\-LEN, MAX\_\-LISTENQUEUELEN, MAX\_\-TABLE\_\-LEN, MAX\_\-USERNAME\_\-LEN, MAX\_\-VALUE\_\-LEN, config\_\-params::password, recvline(), config\_\-params::server\_\-host, config\_\-params::server\_\-port, timeval\_\-subtract(), and config\_\-params::username.
+

@@ -1,0 +1,19 @@
+
+>> Server starting
+[LOG] Server Starting: ... 
+[LOG] Server Starting: Database Created 
+ALPHA NUM ONLY ! 
+HOSTNAME localhost
+0-9 ONLY ! 
+PORT NUM 6693 
+ALPHA NUM ONLY ! 
+USERNAME admin
+ALL OTHER! 
+PASSWORD xxxnq.BMCifhU
+ALPHA NUM ONLY ! 
+ALPHA NUM ONLY ! 
+COLON 
+CHAR 
+LEFT BRACE 
+ALL OTHER! 
+>> Error processing config file.

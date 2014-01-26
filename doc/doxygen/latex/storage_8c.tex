@@ -1,0 +1,253 @@
+\hypertarget{storage_8c}{
+\section{storage.c File Reference}
+\label{storage_8c}\index{storage.c@{storage.c}}
+}
+
+
+This file contains the implementation of the storage server interface as specified in \hyperlink{storage_8h}{storage.h}.  
+
+
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/socket.h$>$}\par
+{\ttfamily \#include $<$netdb.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include \char`\"{}storage.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}client.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}utils.h\char`\"{}}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{storage_8c_a24a31f60b063af0e662125ea2427b140}{
+\#define {\bfseries LOGGING}~1}
+\label{storage_8c_a24a31f60b063af0e662125ea2427b140}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{storage_8c_abc3751ffba629aad5a4b8c7c22a75e11}{storage\_\-connect} (const char $\ast$hostname, const int port)
+\begin{DoxyCompactList}\small\item\em Establish a connection to the server. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8c_aa97b5545b3eefb5055a4e6febd375796}{storage\_\-auth} (const char $\ast$username, const char $\ast$passwd, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em This is the authentication function, this function will send the client information to the server and verify that information with the deafult.conf file. Once the information has been verified this function will return a code depending on the status of the verification. if it returned 0 then the authentication is successful. If another number is returned however, then an error occured. The type of error is determined by the code that is returned. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8c_ac75689ee50898a2f6580c6489e886b59}{storage\_\-get} (const char $\ast$\hyperlink{structtable}{table}, const char $\ast$key, struct \hyperlink{structstorage__record}{storage\_\-record} $\ast$record, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em This is just a minimal stub implementation. You should modify it according to your design. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8c_a8a42f72670cdcd7bf83416df1f1b090d}{storage\_\-set} (const char $\ast$\hyperlink{structtable}{table}, const char $\ast$key, struct \hyperlink{structstorage__record}{storage\_\-record} $\ast$record, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em This is just a minimal stub implementation. You should modify it according to your design. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8c_af4e09b41d2bc5b8c25936fe952e748b2}{storage\_\-query} (const char $\ast$\hyperlink{structtable}{table}, const char $\ast$predicates, char $\ast$$\ast$keys, const int max\_\-keys, void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em Query the table for records, and retrieve the matching keys. \item\end{DoxyCompactList}\item 
+int \hyperlink{storage_8c_acd449536193542befbae2ff5e916f657}{storage\_\-disconnect} (void $\ast$conn)
+\begin{DoxyCompactList}\small\item\em This is just a minimal stub implementation. You should modify it according to your design. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{storage_8c_ad64fceadc9d5019984552bec79f20fa2}{
+int {\bfseries AUTH\_\-STATUS} = 1}
+\label{storage_8c_ad64fceadc9d5019984552bec79f20fa2}
+
+\item 
+\hypertarget{storage_8c_ac150629b1ddaf346deeb080745b53c9b}{
+char {\bfseries holder} \mbox{[}100\mbox{]}}
+\label{storage_8c_ac150629b1ddaf346deeb080745b53c9b}
+
+\item 
+\hypertarget{storage_8c_a921a51efabbd17451ca116ab58ce0609}{
+FILE $\ast$ {\bfseries fpCLIENT} = NULL}
+\label{storage_8c_a921a51efabbd17451ca116ab58ce0609}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the implementation of the storage server interface as specified in \hyperlink{storage_8h}{storage.h}. 
+
+Definition in file \hyperlink{storage_8c_source}{storage.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{storage_8c_aa97b5545b3eefb5055a4e6febd375796}{
+\index{storage.c@{storage.c}!storage\_\-auth@{storage\_\-auth}}
+\index{storage\_\-auth@{storage\_\-auth}!storage.c@{storage.c}}
+\subsubsection[{storage\_\-auth}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-auth (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ username, }
+\item[{const char $\ast$}]{ passwd, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8c_aa97b5545b3eefb5055a4e6febd375796}
+
+
+This is the authentication function, this function will send the client information to the server and verify that information with the deafult.conf file. Once the information has been verified this function will return a code depending on the status of the verification. if it returned 0 then the authentication is successful. If another number is returned however, then an error occured. The type of error is determined by the code that is returned. 
+
+Authenticate the client's connection to the server. 
+
+Definition at line 105 of file storage.c.
+
+
+
+References ERR\_\-AUTHENTICATION\_\-FAILED, generate\_\-encrypted\_\-password(), recvline(), and sendall().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8c_abc3751ffba629aad5a4b8c7c22a75e11}{
+\index{storage.c@{storage.c}!storage\_\-connect@{storage\_\-connect}}
+\index{storage\_\-connect@{storage\_\-connect}!storage.c@{storage.c}}
+\subsubsection[{storage\_\-connect}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ storage\_\-connect (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ hostname, }
+\item[{const int}]{ port}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8c_abc3751ffba629aad5a4b8c7c22a75e11}
+
+
+Establish a connection to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em hostname}]The IP address or hostname of the server. \item[{\em port}]The TCP port of the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If successful, return a pointer to a data structure that represents a connection to the server. Otherwise return NULL.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, or ERR\_\-UNKNOWN. 
+
+Client connects! REASONING: We will have to ensure that the user correctly enters the required hostname and password. we will LOG what the user enters for the hostname and password, as well as what time they connect. NOTE: If this log does not get written, the client has likely not entered a valid hostname and/or password LOGGER 1! If connection to server not made, return NULL, ELSE if connection made, return socket value (integer).
+
+
+
+Definition at line 31 of file storage.c.
+
+
+
+References currentDateTime(), and logger().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8c_acd449536193542befbae2ff5e916f657}{
+\index{storage.c@{storage.c}!storage\_\-disconnect@{storage\_\-disconnect}}
+\index{storage\_\-disconnect@{storage\_\-disconnect}!storage.c@{storage.c}}
+\subsubsection[{storage\_\-disconnect}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-disconnect (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8c_acd449536193542befbae2ff5e916f657}
+
+
+This is just a minimal stub implementation. You should modify it according to your design. 
+
+Close the connection to the server. 
+
+Definition at line 514 of file storage.c.
+
+
+
+References currentDateTime(), and logger().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8c_ac75689ee50898a2f6580c6489e886b59}{
+\index{storage.c@{storage.c}!storage\_\-get@{storage\_\-get}}
+\index{storage\_\-get@{storage\_\-get}!storage.c@{storage.c}}
+\subsubsection[{storage\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ table, }
+\item[{const char $\ast$}]{ key, }
+\item[{struct {\bf storage\_\-record} $\ast$}]{ record, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8c_ac75689ee50898a2f6580c6489e886b59}
+
+
+This is just a minimal stub implementation. You should modify it according to your design. 
+
+Retrieve the value associated with a key in a table. 
+
+Definition at line 174 of file storage.c.
+
+
+
+References ERR\_\-KEY\_\-NOT\_\-FOUND, ERR\_\-TABLE\_\-NOT\_\-FOUND, logger(), recvline(), sendall(), valid\_\-string\_\-check(), and storage\_\-record::value.
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8c_af4e09b41d2bc5b8c25936fe952e748b2}{
+\index{storage.c@{storage.c}!storage\_\-query@{storage\_\-query}}
+\index{storage\_\-query@{storage\_\-query}!storage.c@{storage.c}}
+\subsubsection[{storage\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-query (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ table, }
+\item[{const char $\ast$}]{ predicates, }
+\item[{char $\ast$$\ast$}]{ keys, }
+\item[{const int}]{ max\_\-keys, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8c_af4e09b41d2bc5b8c25936fe952e748b2}
+
+
+Query the table for records, and retrieve the matching keys. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em table}]A table in the database. \item[{\em predicates}]A comma separated list of predicates. \item[{\em keys}]An array of strings where the keys whose records match the specified predicates will be copied. The array must have room for at least max\_\-keys elements. The caller must allocate memory for this array. \item[{\em max\_\-keys}]The size of the keys array. \item[{\em conn}]A connection to the server. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the number of matching keys (which may be more than max\_\-keys) if successful, and -\/1 otherwise.
+\end{DoxyReturn}
+On error, errno will be set to one of the following, as appropriate: ERR\_\-INVALID\_\-PARAM, ERR\_\-CONNECTION\_\-FAIL, ERR\_\-TABLE\_\-NOT\_\-FOUND, ERR\_\-KEY\_\-NOT\_\-FOUND, ERR\_\-NOT\_\-AUTHENTICATED, or ERR\_\-UNKNOWN.
+
+Each predicate consists of a column name, an operator, and a value, each separated by optional whitespace. The operator may be a \char`\"{}=\char`\"{} for string types, or one of \char`\"{}$<$, $>$, =\char`\"{} for int and float types. An example of query predicates is \char`\"{}name = bob, mark $>$ 90\char`\"{}. 
+
+Definition at line 368 of file storage.c.
+
+
+
+References ERR\_\-INVALID\_\-PARAM, ERR\_\-TABLE\_\-NOT\_\-FOUND, logger(), MAX\_\-KEY\_\-LEN, recvline(), sendall(), and valid\_\-string\_\-check().
+
+
+
+Referenced by main().
+
+\hypertarget{storage_8c_a8a42f72670cdcd7bf83416df1f1b090d}{
+\index{storage.c@{storage.c}!storage\_\-set@{storage\_\-set}}
+\index{storage\_\-set@{storage\_\-set}!storage.c@{storage.c}}
+\subsubsection[{storage\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int storage\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ table, }
+\item[{const char $\ast$}]{ key, }
+\item[{struct {\bf storage\_\-record} $\ast$}]{ record, }
+\item[{void $\ast$}]{ conn}
+\end{DoxyParamCaption}
+)}}
+\label{storage_8c_a8a42f72670cdcd7bf83416df1f1b090d}
+
+
+This is just a minimal stub implementation. You should modify it according to your design. 
+
+Store a key/value pair in a table. 
+
+Definition at line 263 of file storage.c.
+
+
+
+References currentDateTime(), logger(), recvline(), sendall(), valid\_\-string\_\-check(), and storage\_\-record::value.
+
+
+
+Referenced by main().
+

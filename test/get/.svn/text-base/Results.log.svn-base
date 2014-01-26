@@ -1,0 +1,7 @@
+Running suite Get Tests
+main.c:285:P:Get:test_null_key:0: Passed
+main.c:298:P:Get:test_null_table:0: Passed
+main.c:310:P:Get:test_missing_key:0: Passed
+main.c:322:P:Get:test_bad_key:0: Passed
+Results for all suites run:
+100%: Checks: 4, Failures: 0, Errors: 0

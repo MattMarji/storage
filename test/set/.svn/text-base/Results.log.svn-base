@@ -1,0 +1,10 @@
+Running suite Set Tests
+main.c:285:P:Set:test_col_order:0: Passed
+main.c:299:P:Set:test_value_type:0: Passed
+main.c:313:P:Set:test_extra_col:0: Passed
+main.c:327:P:Set:test_invalid_colname:0: Passed
+main.c:341:F:Set:test_float_type:0: storage_set with float type not setting errno properly.
+main.c:355:F:Set:test_missing_comma:0: storage_set without comma not setting errno properly.
+main.c:372:E:Set:test_add_modify_delete:0: (after this point) Received signal 11 (Segmentation fault)
+Results for all suites run:
+57%: Checks: 7, Failures: 2, Errors: 1

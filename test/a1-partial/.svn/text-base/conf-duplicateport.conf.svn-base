@@ -1,0 +1,6 @@
+server_host localhost
+server_port 4848
+server_port 2222
+username admin
+password xxxnq.BMCifhU
+table foo

@@ -1,0 +1,104 @@
+\hypertarget{TreeNode_8c}{
+\section{TreeNode.c File Reference}
+\label{TreeNode_8c}\index{TreeNode.c@{TreeNode.c}}
+}
+
+
+In this file we will create the necessary functions to insert, delete, get and set the entries for the tables. Every TableNode has the following: left pointer right pointer struct entry -\/$>$ has a key and value. place the Node in the BST based on the entry-\/$>$key value.  
+
+
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdbool.h$>$}\par
+{\ttfamily \#include \char`\"{}TreeNode.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}TreeDB.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{TreeNode_8c_a053da5e399c2d8c0174a77e15f0b0fd1}{
+struct \hyperlink{structTreeNode}{TreeNode} $\ast$ \hyperlink{TreeNode_8c_a053da5e399c2d8c0174a77e15f0b0fd1}{createTreeNode} (struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$entryPtr)}
+\label{TreeNode_8c_a053da5e399c2d8c0174a77e15f0b0fd1}
+
+\begin{DoxyCompactList}\small\item\em Create an entry node for storage in the appropriate table. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a150ed1d227b8b505da6029602390e4fc}{
+void {\bfseries deleteTreeNode} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node)}
+\label{TreeNode_8c_a150ed1d227b8b505da6029602390e4fc}
+
+\item 
+\hypertarget{TreeNode_8c_a4d3e34665cb3ebf2ccd2b78bccf964ac}{
+void \hyperlink{TreeNode_8c_a4d3e34665cb3ebf2ccd2b78bccf964ac}{setLeft} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$current, struct \hyperlink{structTreeNode}{TreeNode} $\ast$newLeft)}
+\label{TreeNode_8c_a4d3e34665cb3ebf2ccd2b78bccf964ac}
+
+\begin{DoxyCompactList}\small\item\em sets the left child of the struct \hyperlink{structTreeNode}{TreeNode}. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a7ead4f4e8084cf6d0e296614f6a18f1f}{
+void \hyperlink{TreeNode_8c_a7ead4f4e8084cf6d0e296614f6a18f1f}{setRight} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$current, struct \hyperlink{structTreeNode}{TreeNode} $\ast$newRight)}
+\label{TreeNode_8c_a7ead4f4e8084cf6d0e296614f6a18f1f}
+
+\begin{DoxyCompactList}\small\item\em sets the right child of the struct \hyperlink{structTreeNode}{TreeNode} \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_ad41b406f7ef76564f3ae841ae4348754}{
+struct \hyperlink{structTreeNode}{TreeNode} $\ast$ \hyperlink{TreeNode_8c_ad41b406f7ef76564f3ae841ae4348754}{getLeft} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$current)}
+\label{TreeNode_8c_ad41b406f7ef76564f3ae841ae4348754}
+
+\begin{DoxyCompactList}\small\item\em gets the left child of the struct \hyperlink{structTreeNode}{TreeNode} \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a2336affec8e7ca7978f369209ad38c5b}{
+struct \hyperlink{structTreeNode}{TreeNode} $\ast$ \hyperlink{TreeNode_8c_a2336affec8e7ca7978f369209ad38c5b}{getRight} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$current)}
+\label{TreeNode_8c_a2336affec8e7ca7978f369209ad38c5b}
+
+\begin{DoxyCompactList}\small\item\em gets the right child of the struct \hyperlink{structTreeNode}{TreeNode} \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a3000440864cb6ee05a057ad81880348b}{
+struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$ \hyperlink{TreeNode_8c_a3000440864cb6ee05a057ad81880348b}{getEntry} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node)}
+\label{TreeNode_8c_a3000440864cb6ee05a057ad81880348b}
+
+\begin{DoxyCompactList}\small\item\em returns a pointer to the DBentry the struct \hyperlink{structTreeNode}{TreeNode} contains. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_ac8c54b48da3d9973f58c1f3b91b75a97}{
+struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$ \hyperlink{TreeNode_8c_ac8c54b48da3d9973f58c1f3b91b75a97}{findTable} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node, char $\ast$name)}
+\label{TreeNode_8c_ac8c54b48da3d9973f58c1f3b91b75a97}
+
+\begin{DoxyCompactList}\small\item\em Search for an entry by comparing a string to the current keys in the BST. If the entry is found, we will return the structure so that the elements can be accessed as necessary. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a2664413e6e9c4327500a02967c1a6cf8}{
+bool \hyperlink{TreeNode_8c_a2664413e6e9c4327500a02967c1a6cf8}{insertTable} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node, struct \hyperlink{structTreeEntry}{TreeEntry} $\ast$newEntry)}
+\label{TreeNode_8c_a2664413e6e9c4327500a02967c1a6cf8}
+
+\begin{DoxyCompactList}\small\item\em Inserts, if it already exists returns false, otherwise true. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a06e9eeb9e964ef51b3d35b78c48f27e1}{
+struct \hyperlink{structTreeNode}{TreeNode} $\ast$ {\bfseries removeTable} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node, char $\ast$name, struct \hyperlink{structTreeNode}{TreeNode} $\ast$$\ast$check)}
+\label{TreeNode_8c_a06e9eeb9e964ef51b3d35b78c48f27e1}
+
+\item 
+struct \hyperlink{structTreeNode}{TreeNode} $\ast$ \hyperlink{TreeNode_8c_a1998d28005d1a2c6964a7367931e03de}{getLargest} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node)
+\begin{DoxyCompactList}\small\item\em In the case where we have to delete an entry that has two entries (to the left, and to the right) We must find the MAX entry from the left subtree and replace it with this. \item\end{DoxyCompactList}\item 
+\hypertarget{TreeNode_8c_a2b6f3017937b0ddee67367355951b27b}{
+void {\bfseries printNodes} (struct \hyperlink{structTreeNode}{TreeNode} $\ast$node)}
+\label{TreeNode_8c_a2b6f3017937b0ddee67367355951b27b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+In this file we will create the necessary functions to insert, delete, get and set the entries for the tables. Every TableNode has the following: left pointer right pointer struct entry -\/$>$ has a key and value. place the Node in the BST based on the entry-\/$>$key value. 
+
+Definition in file \hyperlink{TreeNode_8c_source}{TreeNode.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{TreeNode_8c_a1998d28005d1a2c6964a7367931e03de}{
+\index{TreeNode.c@{TreeNode.c}!getLargest@{getLargest}}
+\index{getLargest@{getLargest}!TreeNode.c@{TreeNode.c}}
+\subsubsection[{getLargest}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf TreeNode}$\ast$ getLargest (
+\begin{DoxyParamCaption}
+\item[{struct {\bf TreeNode} $\ast$}]{ node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}read\mbox{]}}}}
+\label{TreeNode_8c_a1998d28005d1a2c6964a7367931e03de}
+
+
+In the case where we have to delete an entry that has two entries (to the left, and to the right) We must find the MAX entry from the left subtree and replace it with this. 
+
+\begin{DoxyReturn}{Returns}
+Returning the largest element 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file TreeNode.c.
+

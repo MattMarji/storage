@@ -1,0 +1,67 @@
+\hypertarget{client_8c}{
+\section{client.c File Reference}
+\label{client_8c}\index{client.c@{client.c}}
+}
+
+
+This file implements a \char`\"{}very\char`\"{} simple sample client.  
+
+
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$time.h$>$}\par
+{\ttfamily \#include $<$sys/time.h$>$}\par
+{\ttfamily \#include $<$errno.h$>$}\par
+{\ttfamily \#include \char`\"{}storage.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}utils.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{client_8c_a44b8576dd74283a8a8112ca5cad7942c}{
+char $\ast$ {\bfseries newLineRemover} (char $\ast$input)}
+\label{client_8c_a44b8576dd74283a8a8112ca5cad7942c}
+
+\item 
+int \hyperlink{client_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Start a client to interact with the storage server. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{client_8c_a921a51efabbd17451ca116ab58ce0609}{
+FILE $\ast$ {\bfseries fpCLIENT}}
+\label{client_8c_a921a51efabbd17451ca116ab58ce0609}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements a \char`\"{}very\char`\"{} simple sample client. The client connects to the server, running at SERVERHOST:SERVERPORT and performs a number of storage\_\-$\ast$ operations. If there are errors, the client exists. 
+
+Definition in file \hyperlink{client_8c_source}{client.c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{client_8c_a0ddf1224851353fc92bfbff6f499fa97}{
+\index{client.c@{client.c}!main@{main}}
+\index{main@{main}!client.c@{client.c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{ argc, }
+\item[{char $\ast$}]{ argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}
+\label{client_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Start a client to interact with the storage server. 
+
+If connect is successful, the client performs a storage\_\-set/get() on TABLE and KEY and outputs the results on stdout. Finally, it exists after disconnecting from the server. 
+
+Definition at line 41 of file client.c.
+
+
+
+References MAX\_\-HOST\_\-LEN, MAX\_\-KEY\_\-LEN, MAX\_\-TABLE\_\-LEN, MAX\_\-USERNAME\_\-LEN, storage\_\-auth(), storage\_\-connect(), storage\_\-disconnect(), storage\_\-get(), storage\_\-query(), storage\_\-set(), and storage\_\-record::value.
+
